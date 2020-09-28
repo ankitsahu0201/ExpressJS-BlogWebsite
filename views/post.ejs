@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<% var flag=false; %>
+<% posts.forEach(function(post){ %>
+ <%  if(post.msgTitle == reqTitle){ %>
+    <p class="h1"> <%= post.msgTitle %> </p>
+    <p> <%= post.msgContent %> </p>
+    <% flag=true; %>
+ <%  } %>
+<% }) %>
+
+<% if(!flag){ %>
+  <p class="h1"> Sorry! </p>
+  <p> Requested post is not found. </p>
+<% } %>
+
+<%- include("partials/footer"); -%>

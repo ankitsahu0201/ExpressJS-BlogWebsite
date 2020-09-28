@@ -1,0 +1,15 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p>Publish your passions, your way</p>
+
+<% for (var i=0; i<posts.length; i++){ %>
+  <p class="h1"> <%= posts[i].msgTitle %> </p>
+  <p> <%= posts[i].msgContent.substring(0,100) + "..." %><a href="/post/<%= posts[i].msgTitle%>"> Read More </a> </p>
+<% } %>
+
+<form action="/compose" method="get">
+  <button type="submit" class = "btn btn-primary" name="button">Add</button>
+</form>
+
+<%- include("partials/footer"); -%>
