@@ -1,4 +1,4 @@
-exports text_truncate = function(str, length, ending) {
+exports.text_truncate = function(str, length, ending) {
     if (length == null) {
       length = 100;
     }
